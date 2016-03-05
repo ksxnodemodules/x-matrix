@@ -17,7 +17,7 @@ class RowMajorOrder extends Array {
 		this[_getIndex(size, position)] = value;
 	}
 }
-var space = xmat.createVectorSpace(RowMajorOrder, new xmat.Size(3, 3), xmat.ADD_NUMBERS, xmat.MULTIPLY_NUMBERS);
+var space = new xmat.VectorSpace(RowMajorOrder, new xmat.Size(3, 3), xmat.ADD_NUMBERS, xmat.MULTIPLY_NUMBERS);
 function _getIndex(size, position) {
 	return this[position[0] * size[1] + position[1]];
 }

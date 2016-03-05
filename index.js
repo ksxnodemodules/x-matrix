@@ -3,7 +3,7 @@
 	'use strict';
 
 	module.exports = {
-		createClass: require('./create-class.js')
+		VectorSpace: require('./vector-space.js')
 	};
 
 })(module);

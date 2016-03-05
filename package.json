@@ -14,7 +14,9 @@
 	"engines": {
 		"node": ">=5.0.0"
 	},
-	"dependencies": {},
+	"dependencies": {
+		"x-vector": "< 2.0.0"
+	},
 	"files": [
 		"index.js",
 		"create-class.js"
