@@ -10,7 +10,7 @@ Node v5.0.0 or later
 
 ```javascript
 var xmat = require('x-matrix');
-const SIZE = new xmat.Size([3, 3], {order: 'column-major', struct: 'shallow'});
+const SIZE = new xmat.Size([3, 3], {order: 'col-major', struct: 'shallow'});
 class Float64Matrix extends Float64Array {
 	constructor() {super(parseInt(SIZE))}
 	get(position) {return this[position]}
