@@ -10,13 +10,11 @@ Node v5.0.0 or later
 
 ```javascript
 var xmat = require('x-matrix');
-class RowMajorOrder extends Array {
-	get(position) {
-		return this[position];
-	}
-	set(position, value) {
-		this[position] = value;
-	}
+const SIZE = new xmat.Size([3, 3], {order: 'column-major', struct: 'shallow'});
+class Float64Matrix extends Float64Array {
+	constructor() {super(parseInt(SIZE))}
+	get(position) {return this[position]}
+	set(position, value) {this[position] = value}
 }
-var Matrix = new xmat.VectorSpace(RowMajorOrder, new xmat.Size(3, 3), xmat.NUMBER_OPERATIONS).Matrix;
+var Matrix = new xmat.VectorSpace(Float64Matrix, SIZE, xmat.NUMBER_OPERATIONS).Matrix;
 ```
