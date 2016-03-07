@@ -15,7 +15,7 @@
 		"node": ">=5.0.0"
 	},
 	"dependencies": {
-		"x-vector": "< 2.0.0"
+		"x-vector": ">=0.0.4 <2.0.0"
 	},
 	"files": [
 		"index.js",

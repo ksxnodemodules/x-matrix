@@ -11,14 +11,14 @@ Node v5.0.0 or later
 ```javascript
 var xmat = require('x-matrix');
 class RowMajorOrder extends Array {
-	get(size, position) {
+	get(position) {
 		return this[_getIndex(size, position)];
 	}
-	set(size, position, value) {
+	set(position, value) {
 		this[_getIndex(size, position)] = value;
 	}
 }
-var space = new xmat.VectorSpace(RowMajorOrder, new xmat.Size(3, 3), xmat.ADD_NUMBERS, xmat.MULTIPLY_NUMBERS);
+var space = new xmat.VectorSpace(RowMajorOrder, new xmat.Size(3, 3), xmat.NUMBER_OPERATIONS);
 function _getIndex(size, position) {
 	return this[position[0] * size[1] + position[1]];
 }
